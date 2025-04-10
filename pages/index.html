@@ -1,136 +1,109 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TripBooker</title>
     <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="contenedor">
-
-        <header class="banner">
-            <img src="../image/logo.png" alt="logo" width="150px" style="border-radius: 100%;">
+    <div class="banner">
+        <header>
+            <img src="/image/logo.png" width="350px">
             <nav class="links">
-                <a href="" class="link"><i class="fa-solid fa-house"></i> Inicio</a>
-                <a href="" class="link"><i class="fa-solid fa-phone"></i> Contacto</a>
-                <a href="" class="link"><i class="fa-solid fa-calendar-days"></i> Reservas</a>
-                <a href="login.html" class="link"><i class="fa-solid fa-user"></i> Inicio Sesion</a>
+                <a href="" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+                <a href="" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+                <a href="" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+                <a href="" class="link"><i class="fas fa-car"></i> Carros</a>
+                <a href="" class="link"><i class="fas fa-bus"></i> Buses</a>
             </nav>
         </header>
 
-        <div class="busqueda">
-            <h3>Busca el lugar de interes</h3>
-            <nav class="input">
-                <input type="text" placeholder="Buscar">
-                <input type="date" name="fecha" id="">
-                <input type="date" name="fecha" id="">
-                <button><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-            </nav>
-        </div>
-
-        <center><a href="" class="titulos"><h1><i class="fa-solid fa-plane"></i> Lugares de interes</h1></a></center>
+        <section class="hero">
+            <h2>Encuentra y reserva<br>tu próximo viaje</h2>
+            <p>Descubre las mejores ofertas en hoteles, vuelos, actividades y más.</p>
         
-        <div class="intereses">
-
-            <div class="lugar">
-                <img src="../image/Mejores-Playas-de-Cancún.jpg" alt="" width="400px">
-                <div class="contenido">
-                    <h4><i class="fa-solid fa-location-dot"></i> Cancun</h4>
-                    <p>Precio: $3.000.000 COP</p>
-                    <button>Reservar - Ver <i class="fa-solid fa-circle-chevron-right"></i></button>
-                </div>
+            <div class="form-container">
+                <input type="text" placeholder="Destino">
+                <input type="date" placeholder="Fecha de entrada">
+                <input type="date" placeholder="Fecha salida">
+                <input type="number" placeholder="Personas">
+                <button><i class="fas fa-check-circle"></i> Confirmar</button>
+                <button><i class="fas fa-search"></i> Buscar</button>
             </div>
-
-            <div class="lugar">
-                <img src="../image/Mejores-Playas-de-Cancún.jpg" alt="" width="400px">
-                <div class="contenido">
-                    <h4><i class="fa-solid fa-location-dot"></i> Cancun</h4>
-                    <p>Precio: $3.000.000 COP</p>
-                    <button>Reservar - Ver <i class="fa-solid fa-circle-chevron-right"></i></button>
-                </div>
+        
+            <div class="category-boxes">
+                <a class="category">
+                    <i class="fas fa-bed"></i>
+                    <p>Hoteles</p>
+                </a>
+                <a class="category">
+                    <i class="fas fa-plane"></i>
+                    <p>Vuelos</p>
+                 </a>
+                <a class="category">
+                    <i class="fas fa-hiking"></i>
+                    <p>Actividades</p>
+                </a>
+                <a class="category">
+                    <i class="fas fa-car"></i>
+                    <p>Carros</p>
+                </a>
+                <a class="category">
+                    <i class="fas fa-bus"></i>
+                    <p>Buses</p>
+                </a>
             </div>
-
-            <div class="lugar">
-                <img src="../image/Mejores-Playas-de-Cancún.jpg" alt="" width="400px">
-                <div class="contenido">
-                    <h4><i class="fa-solid fa-location-dot"></i> Cancun</h4>
-                    <p>Precio: $3.000.000 COP</p>
-                    <button>Reservar - Ver <i class="fa-solid fa-circle-chevron-right"></i></button>
-                </div>
-            </div>
-
-            <div class="lugar">
-                <img src="../image/Mejores-Playas-de-Cancún.jpg" alt="" width="400px">
-                <div class="contenido">
-                    <h4><i class="fa-solid fa-location-dot"></i> Cancun</h4>
-                    <p>Precio: $3.000.000 COP</p>
-                    <button>Reservar - Ver <i class="fa-solid fa-circle-chevron-right"></i></button>
-                </div>
-            </div>
-        </div>
-
-        <center><a href="" class="titulos"><h1><i class="fa-solid fa-city"></i> Hoteleria</h1></a></center>
-    
-        <div class="intereses">
-            <div class="lugar">
-                <img src="../image/hotel.jpg" alt="" width="400px">
-                <div class="contenido">
-                    <h4><i class="fa-solid fa-hotel"></i> Cancun</h4>
-                    <p>Precio: $3.000.000 COP</p>
-                    <button>Reservar - Ver <i class="fa-solid fa-circle-chevron-right"></i></button>
-                </div>
-            </div>
-            <div class="lugar">
-                <img src="../image/hotel.jpg" alt="" width="400px">
-                <div class="contenido">
-                    <h4><i class="fa-solid fa-hotel"></i> Cancun</h4>
-                    <p>Precio: $3.000.000 COP</p>
-                    <button>Reservar - Ver <i class="fa-solid fa-circle-chevron-right"></i></button>
-                </div>
-            </div>
-            <div class="lugar">
-                <img src="../image/hotel.jpg" alt="" width="400px">
-                <div class="contenido">
-                    <h4><i class="fa-solid fa-hotel"></i> Cancun</h4>
-                    <p>Precio: $3.000.000 COP</p>
-                    <button>Reservar - Ver <i class="fa-solid fa-circle-chevron-right"></i></button>
-                </div>
-            </div>            
-        </div>
-
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>TripBooker</h3>
-                    <p>Tu mejor opción para viajar y encontrar hospedaje.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Reservas</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Términos y Condiciones</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p><i class="fa-solid fa-envelope"></i> contacto@tripbooker.com</p>
-                    <p><i class="fa-solid fa-phone"></i> +57 300 123 4567</p>
-                    <p><i class="fa-solid fa-map-marker-alt"></i> Bogotá, Colombia</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Síguenos</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>        
+        </section>
     </div>
+    <div class="contenedor">
+        <center><h1><i class="fa-solid fa-star"></i> Destacados</h1></center>
+        <div class="contenedor-cards">
+            <div class="card">
+                <img src="/image/hotel-1.jpg" alt="Hotel 1" width="300px">
+                <h3>GHL Corales de Indias</h3>
+                <p>Dispone de habitaciones amplias y modernas con TV de pantalla plana y aire acondicionado.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img src="/image/hotel-2.jpg" alt="Hotel 1" width="300px">
+                <h3>Hospedaje Rosa Blanca</h3>
+                <p>Se encuentra en Cartagena de Indias, en la región de Bolívar, a 6,2 km de Castillo de San Felipe de Barajas</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img src="/image/hotel-3.jpg" alt="Hotel 1" width="300px">
+                <h3>Hotel El Faro</h3>
+                <p>Ofrece mostrador de información turística, habitaciones hipoalergénicas, salón de uso común, wifi gratis y terraza</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img src="/image/hotel-4.jpg" alt="Hotel 1" width="300px">
+                <h3>Torices Guest House</h3>
+                <p>Pantalla plana, cocina totalmente equipada con nevera y horno, y baño compartido con ducha y artículos de aseo gratuitos.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+        </div>
+        <br>
+        <center><a href="" class="ver-mas"><i class="fas fa-arrow-right"></i> Ver más</a></center>
+        <br>
+    </div>
+
+    <footer>
+        <div class="info-empresa">
+            <img src="/image/logo.png" width="300px">
+            <h2>PLANIFICA TU VIAJE IDEAL TODO EN UN CLICK!!!</h2>
+        </div>
+
+        <div class="redes-sociales">
+            <h2>Seguinos en nuestras redes sociales</h2>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
 </body>
-<script src="https://kit.fontawesome.com/5bdadf922f.js" crossorigin="anonymous"></script>
 </html>
