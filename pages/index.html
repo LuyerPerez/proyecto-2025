@@ -25,15 +25,45 @@
             <h2>Encuentra y reserva<br>tu próximo viaje</h2>
             <p>Descubre las mejores ofertas en hoteles, vuelos, actividades y más.</p>
         
-            <div class="form-container">
-                <input type="text" placeholder="Destino">
-                <input type="date" placeholder="Fecha de entrada">
-                <input type="date" placeholder="Fecha salida">
-                <input type="number" placeholder="Personas">
-                <button><i class="fas fa-check-circle"></i> Confirmar</button>
-                <button><i class="fas fa-search"></i> Buscar</button>
-            </div>
-        
+            <center>
+                <form class="form-container">
+                    <div class="form-top-row">
+                      <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="destino" placeholder=" " required />
+                        <label for="destino">Destino</label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="fecha-entrada" placeholder=" " required />
+                        <label for="fecha-entrada">Fecha de entrada</label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-calendar-check"></i>
+                        <input type="date" id="fecha-salida" placeholder=" " required />
+                        <label for="fecha-salida">Fecha de salida</label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="number" id="personas" min="1" placeholder=" " required />
+                        <label for="personas">Personas</label>
+                      </div>
+                
+                      <button type="button" class="btn btn-confirmar">
+                        <i class="fas fa-check-circle"></i> Confirmar
+                      </button>
+                    </div>
+                
+                    <div class="form-bottom-row">
+                      <button type="submit" class="btn btn-buscar">
+                        <i class="fas fa-search"></i> Buscar
+                      </button>
+                    </div>
+                  </form>
+            </center>
             <div class="category-boxes">
                 <a class="category">
                     <i class="fas fa-bed"></i>
@@ -85,6 +115,7 @@
                 <p>Pantalla plana, cocina totalmente equipada con nevera y horno, y baño compartido con ducha y artículos de aseo gratuitos.</p>
                 <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
             </div>
+            
         </div>
         <br>
         <center><a href="" class="ver-mas"><i class="fas fa-arrow-right"></i> Ver más</a></center>
@@ -98,7 +129,7 @@
         </div>
 
         <div class="redes-sociales">
-            <h2>Seguinos en nuestras redes sociales</h2>
+            <h3>Seguinos en nuestras redes sociales</h3>
             <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
