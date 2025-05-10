@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paquetes- TripBooker</title>
+  <link rel="stylesheet" href="paquetes.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="banner">
+    <header>
+        <a href="index.html"><img src="../image/logo.png" width="350px"></a>
+      <nav class="links">
+        <a href="index.html" class="link"><i class="fas fa-home"></i> Inicio</a>
+        <a href="hoteles.html" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+        <a href="vuelos.html" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+        <a href="actividades.html" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+        <a href="carros.html" class="link"><i class="fas fa-car"></i> Carros</a>
+        <a href="buses.html" class="link"><i class="fas fa-bus"></i> Buses</a>
+        <a href="reservas.html" class="link"><i class="fas fa-user"></i> Reservas</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h2><i class="fa-solid fa-mountain-sun"></i>Paquetes</h2>
+      <center>
+        <form class="form-container">
+          <div class="form-top-row">
+            <div class="input-group">
+              <i class="fas fa-map-marker-alt"></i>
+              <input type="text" id="destino" placeholder=" " required />
+              <label for="destino">Destino</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-calendar-alt"></i>
+              <input type="date" id="fecha-entrada" required />
+              <label for="fecha-entrada">Fecha de entrada</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-calendar-check"></i>
+              <input type="date" id="fecha-salida" required />
+              <label for="fecha-salida">Fecha de salida</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="number" id="personas" min="1" required />
+              <label for="personas">Personas</label>
+            </div>
+            <button type="button" class="btn btn-confirmar">
+              <i class="fas fa-check-circle"></i> Confirmar
+            </button>
+          </div>
+          <div class="form-bottom-row">
+            <button type="submit" class="btn btn-buscar">
+              <i class="fas fa-search"></i> Buscar
+            </button>
+          </div>
+        </form>
+      </center>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <center><h1><i class="fa-solid fa-mountain-sun"></i> PAQUETES</h1></center>
+    <div class="contenedor-hoteles">
+      <button class="nav-btn" onclick="mover(-1)"><i class="fas fa-chevron-left"></i></button>
+      <div class="contenedor-cards" id="contenedorCards">
+        <div class="card">
+          <img src="../image/img17.jpg" alt="Paquete 1" />
+          <h3> Paquete "Romance en París" – 6 días / 5 noches</h3>
+          <p>para parejas que buscan amor, historia y elegancia. Paseá por las callecitas de Montmartre, disfrutá de una cena con vista a la Torre Eiffel y viví el arte de la ciudad más romántica del mundo.</p>
+          <p>$250.000 por noche</p>
+          <button onclick="abrirModal('modal1')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img18.jpg" alt="Hotel 2" />
+          <h3>Paquete "Caribe All Inclusive" – Punta Cana – 7 días / 6 noches</h3>
+          <p>Playa, palmeras y mojitos. Un clásico irresistible para quienes quieren descansar, comer rico y disfrutar del mar sin preocuparse por nada.</p>
+          <p>$180.000 por noche</p>
+          <button onclick="abrirModal('modal2')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img19.jpg" alt="Hotel 3" />
+          <h3>Paquete "Aventura Andina" – Cusco + Machu Picchu – 5 días / 4 noches</h3>
+          <p>Explorá una de las maravillas del mundo rodeada de historia y paisajes únicos. Una experiencia que mezcla cultura, aventura y energía ancestral.</p>
+          <p>$200.000 por noche</p>
+          <button onclick="abrirModal('modal3')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img20.jpg" alt="Hotel 4" />
+          <h3>Paquete "Nueva York Express" – 4 días / 3 noches</h3>
+          <p>La ciudad que nunca duerme te espera con rascacielos, Broadway, arte y compras. Un viaje corto pero intenso, para vivir lo mejor de NYC.</p>
+          <p>$350.000 por noche</p>
+          <button onclick="abrirModal('modal4')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img21.jpg" alt="Hotel 5" />
+          <h3>Paquete "Patagonia al Natural" – El Calafate – 5 días / 4 noches</h3>
+          <p>Conocé el imponente glaciar Perito Moreno y los paisajes australes más bellos del mundo. Perfecto para relajarte y maravillarte con la naturaleza.</p>
+          <p>$250.000 por noche</p>
+          <button onclick="abrirModal('modal5')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img 22.jpg" alt="Hotel 6" />
+          <h3>Paquete "Misterios de Egipto" – 8 días / 7 noches</h3>
+          <p> Un viaje a la cuna de la civilización antigua. Navegá por el Nilo, descubrí las pirámides y sentí la historia viva en cada rincón.</p>
+          <p>$200.000 por noche</p>
+          <button onclick="abrirModal('modal6')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+      </div>
+      <button class="nav-btn" onclick="mover(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="info-empresa">
+      <img src="../image/logo.png" width="300px">
+      <h2>PLANIFICA TU VIAJE IDEAL TODO EN UN CLICK!!!</h2>
+    </div>
+    <div class="redes-sociales">
+      <h3>Siguenos en nuestras redes sociales</h3>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>✈️ Romance en París – 6 días / 5 noches </h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img28.jpg" alt="Paquete 1">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 2</p>
+            <p><i class="fas fa-bed"></i> 1</p>
+            <p><i class="fas fa-bath"></i> 1</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>✈️ Vuelos ida y vuelta en clase económica desde ciudad de origen con maleta incluida, horarios cómodos y atención en español.
+
+            🏨 5 noches de alojamiento en hotel boutique 3★, ubicado en el barrio latino o Montmartre, con decoración romántica, desayuno buffet incluido y amenities especiales (botella de vino o pétalos en la cama).
+            
+            🚤 Crucero nocturno por el Sena con cena incluida: navegación panorámica por los monumentos iluminados (Notre Dame, la Torre Eiffel, el Louvre), cena gourmet de 3 pasos y copa de champagne.
+            
+            🖼️ Tour privado al Museo del Louvre (sin filas) y excursión guiada a Versalles, con entradas, guía en español y transporte incluido.
+            
+            🌹 Picnic guiado en los Jardines de Luxemburgo, con canasta de quesos, baguette, vino y manta personalizada.
+            
+            🚖 Traslados privados aeropuerto–hotel–aeropuerto en vehículo climatizado.
+            
+            📱 Asistencia personalizada durante el viaje vía WhatsApp las 24 hs, guía digital con mapas y recomendaciones locales.</p>
+            <p><strong>$250.000 por noche</strong></p>
+            <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🏝️ Caribe All Inclusive – Punta Cana – 7 días / 6 noches</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img27.jpg" alt="Hotel 2">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 2</p>
+            <p><i class="fas fa-bed"></i> 1</p>
+            <p><i class="fas fa-bath"></i> 1</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p> Incluye:
+
+            ✈️ Vuelos ida y vuelta con equipaje y traslados incluidos, coordinados con los horarios del check-in.
+            
+            🏨 6 noches en resort 5★ frente al mar, con habitación doble o familiar, minibar gratuito, balcón con vista al jardín o al mar y acceso directo a la playa.
+            
+            🍽️ Régimen all inclusive total: desayuno, almuerzo y cena buffet, restaurantes a la carta de diferentes especialidades (mexicano, italiano, asiático), snacks las 24 hs, bebidas alcohólicas nacionales e internacionales sin límite.
+            
+            🧘 Actividades diarias para adultos y niños: yoga, pilates, clases de cocina, concursos, aeróbicos acuáticos.
+            
+            🌊 Deportes acuáticos no motorizados incluidos: kayak, paddle board, snorkel, catamarán, clases introductorias de buceo en piscina.
+
+            🎭 Espectáculos nocturnos todos los días: shows caribeños, música en vivo, fiestas temáticas y discoteca.
+            </p>
+            <p><strong>$180.000 por noche</strong></p>
+            <h3>Calificaciones</h3>
+          <div class="estrellas">    
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🗻 Aventura Andina – Cusco + Machu Picchu – 5 días / 4 noches</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img26.jpg" alt="Hotel 3">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 2</p>
+            <p><i class="fas fa-bed"></i> 1</p>
+            <p><i class="fas fa-bath"></i> 1</p>
+            <p><i class="fas fa-shower"></i> 2</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Incluye:
+
+            ✈️ Vuelos internacionales y domésticos, con equipaje incluido y horarios sincronizados.
+            
+            🏨 2 noches en hotel 3★ en Cusco y 2 noches en Aguas Calientes, con desayuno buffet y bebida de bienvenida (mate de coca).
+            
+            🚞 Tren panorámico hasta Machu Picchu (ida y vuelta): ventanales panorámicos para disfrutar del paisaje andino + snack a bordo.
+            
+            🧭 Visita completa a Machu Picchu con guía en español, entradas incluidas y traslado desde/hacia el hotel.
+            
+            🏞️ Tour al Valle Sagrado: Pisac, Ollantaytambo, mercado local y almuerzo típico andino.
+            
+            🥗 Desayunos diarios + 2 almuerzos incluidos en excursiones.
+            
+            🧳 Portaequipaje, asistencia con traslados internos y kit antisoroche (pastillas, infusiones y asistencia médica básica).
+            
+            🗺️ Guía digital con historia, consejos y rutas alternativas.
+            </p>
+            <p><strong>$220.000 por noche</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🏙️ Nueva York Express – 4 días / 3 noches</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img25.jpg" alt="Hotel 3">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 3</p>
+            <p><i class="fas fa-bed"></i> 2</p>
+            <p><i class="fas fa-bath"></i> 3</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Incluye:
+
+            ✈️ Vuelos ida y vuelta con equipaje de mano y facturado.
+            
+            🏨 3 noches en hotel céntrico de Manhattan (3★ o 4★) con wifi libre, desayuno opcional y ubicación a pasos del metro.
+            
+            🗽 City tour en español (medio día): recorrido en bus y caminatas por los puntos icónicos: Times Square, Central Park, Wall Street, 5ta Avenida, Chinatown, Little Italy y más.
+            
+            🎟️ Entrada al Empire State Building o al Top of the Rock con acceso prioritario para evitar filas.
+            
+            🎭 Tiempo libre para ver un musical en Broadway (opcional con asistencia en compra).
+            
+            🚇 MetroCard ilimitada por 3 días para moverte a tu ritmo por la ciudad.
+            
+            📱 Guía descargable con mapas interactivos, frases útiles y recomendaciones gastronómicas.
+            
+            </p>
+          <p><strong>$350.000 por noche</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🌄 Patagonia al Natural – El Calafate – 5 días / 4 noches</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img24.jpg" alt="Hotel 3">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 2</p>
+            <p><i class="fas fa-bed"></i> 2</p>
+            <p><i class="fas fa-bath"></i> 1</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Incluye:
+
+            ✈️ Vuelos ida y vuelta desde Buenos Aires (u otra ciudad).
+            
+            🏨 4 noches en hostería o apart con desayuno patagónico: dulces caseros, pan de campo, té y café libre.
+            
+            🧊 Excursión completa al glaciar Perito Moreno: guía bilingüe, recorrido por las pasarelas, ingreso al Parque Nacional y navegación en catamarán frente a los témpanos.
+            
+            🥾 Opción de trekking sobre el hielo con crampones (extra recomendado).
+            
+            🏙️ Tiempo libre para recorrer El Calafate, visitar la Laguna Nimez y probar el famoso cordero patagónico.
+            
+            🛍️ Descuento en tiendas locales y chocolaterías.
+            
+            🚐 Traslados incluidos y asistencia personalizada en destino.
+            
+            📸 1 voucher de excursión adicional a elección: Safari náutico, Estancia Cristina, o Glaciarium (según disponibilidad y temporada).
+            
+            </p>
+            <p><strong>$250.000 por noche</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🕌 Paquete "Misterios de Egipto" – 8 días / 7 noches</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img23.jpg" alt="Hotel 3">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 2</p>
+            <p><i class="fas fa-bed"></i> 1</p>
+            <p><i class="fas fa-bath"></i> 1</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Incluye:
+
+            Vuelos internacionales
+            
+            3 noches en El Cairo + 4 noches en crucero por el Nilo
+            
+            Visitas a las pirámides de Giza, Abu Simbel, Luxor, Valle de los Reyes y más
+            
+            Guía en español + entradas a monumentos
+            
+            Todas las comidas durante el crucero
+            
+            Ideal para: viajeros curiosos, amantes de la historia y la cultura.</p>
+            <p><strong>$200.000 por noche</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let scrollX = 0;
+    const contenedor = document.getElementById("contenedorCards");
+
+    function mover(direccion) {
+      const width = contenedor.querySelector(".card").offsetWidth + 20;
+      scrollX += width * direccion;
+      contenedor.scrollTo({ left: scrollX, behavior: "smooth" });
+    }
+
+    function abrirModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = "block";
+    }
+
+    function cerrarModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modales = document.querySelectorAll(".modal");
+      modales.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+
+        window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+  </script>
+</body>
+</html>

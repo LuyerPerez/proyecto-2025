@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paquetes familiares- TripBooker</title>
+  <link rel="stylesheet" href="paquetesfam.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="banner">
+    <header>
+        <a href="index.html"><img src="../image/logo.png" width="350px"></a>
+      <nav class="links">
+        <a href="index.html" class="link"><i class="fas fa-home"></i> Inicio</a>
+        <a href="hoteles.html" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+        <a href="vuelos.html" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+        <a href="actividades.html" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+        <a href="carros.html" class="link"><i class="fas fa-car"></i> Carros</a>
+        <a href="buses.html" class="link"><i class="fas fa-bus"></i> Buses</a>
+        <a href="reservas.html" class="link"><i class="fas fa-user"></i> Reservas</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h2><i class="fa-solid fa-people-roof"></i> Paquetes Familiares</h2>
+      <center>
+        <form class="form-container">
+          <div class="form-top-row">
+            <div class="input-group">
+              <i class="fas fa-map-marker-alt"></i>
+              <input type="text" id="destino" placeholder=" " required />
+              <label for="destino">Destino</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-calendar-alt"></i>
+              <input type="date" id="fecha-entrada" required />
+              <label for="fecha-entrada">Fecha de entrada</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-calendar-check"></i>
+              <input type="date" id="fecha-salida" required />
+              <label for="fecha-salida">Fecha de salida</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="number" id="personas" min="1" required />
+              <label for="personas">Personas</label>
+            </div>
+            <button type="button" class="btn btn-confirmar">
+              <i class="fas fa-check-circle"></i> Confirmar
+            </button>
+          </div>
+          <div class="form-bottom-row">
+            <button type="submit" class="btn btn-buscar">
+              <i class="fas fa-search"></i> Buscar
+            </button>
+          </div>
+        </form>
+      </center>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <center><h1><i class="fa-solid fa-people-roof"></i> PAQUETES FAMILIARES</h1></center>
+    <div class="contenedor-hoteles">
+      <button class="nav-btn" onclick="mover(-1)"><i class="fas fa-chevron-left"></i></button>
+      <div class="contenedor-cards" id="contenedorCards">
+        <div class="card">
+          <img src="../image/img 3.jpg" alt="Paquete 1" />
+          <h3>Paquete Familiar de Ensueño: Crucero Disney para 5 Personas</h3>
+          <p>¡Vive la magia en alta mar con toda tu familia! Este paquete exclusivo está diseñado para que tú y tus seres queridos disfruten una experiencia inolvidable
+             a bordo del encantador Crucero Disney. Navega hacia destinos paradisíacos mientras compartes risas, aventuras y momentos únicos con tus personajes favoritos de Disney.</p>
+          <p>$250.000 por noche</p>
+          <button onclick="abrirModal('modal1')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img6.jpg" alt="Hotel 2" />
+          <h3>Paquete Familiar "Sol y Arena" – Playa del Carmen</h3>
+          <p>Disfrutá unas vacaciones tropicales inolvidables con todo incluido en uno de los destinos más hermosos de México. Ideal para relajarse y divertirse en familia.</p>
+          <p>$180.000 por noche</p>
+          <button onclick="abrirModal('modal2')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img8.jpg" alt="Hotel 3" />
+          <h3>Paquete "Aventura en la Montaña" – Bariloche</h3>
+          <p>Descubre la belleza de la Patagonia en un viaje único que mezcla adrenalina, paisajes y tiempo de calidad con los que más quieres. Una escapada que combina aventura con calidez!</p>
+          <p>$200.000 por noche</p>
+          <button onclick="abrirModal('modal3')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img10.jpg" alt="Hotel 4" />
+          <h3>Paquete Familiar "Diversión sin Límites" – Orlando con Parques Temáticos</h3>
+          <p>¡El sueño de toda familia! Visitá los parques más famosos del mundo y compartí momentos mágicos con tus personajes favoritos. Diversión garantizada para grandes y chicos.</p>
+          <p>$350.000 por noche</p>
+          <button onclick="abrirModal('modal4')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img12.jpg" alt="Hotel 5" />
+          <h3>Paquete "Naturaleza Total" Glamping en Familia</h3>
+          <p>Vivir la experiencia del camping… pero con todas las comodidades. Este viaje ofrece desconexión, conexión familiar y momentos especiales bajo las estrellas.</p>
+          <p>$250.000 por noche</p>
+          <button onclick="abrirModal('modal5')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/img15.jpg" alt="Hotel 6" />
+          <h3>Paquete familiar "Navidad en Familia" Pueblo Nevado Mágico</h3>
+          <p>¿Te imaginás una Navidad como de película? Este paquete navideño te lleva a un destino de ensueño, lleno de luces, nieve y espíritu festivo.</p>
+          <p>$200.000 por noche</p>
+          <button onclick="abrirModal('modal6')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+      </div>
+      <button class="nav-btn" onclick="mover(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="info-empresa">
+      <img src="../image/logo.png" width="300px">
+      <h2>PLANIFICA TU VIAJE IDEAL TODO EN UN CLICK!!!</h2>
+    </div>
+    <div class="redes-sociales">
+      <h3>Siguenos en nuestras redes sociales</h3>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🌟 Paquete Familiar de Ensueño: Crucero Disney para 5 Personas</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img5.jpg" alt="Paquete 1">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 5</p>
+            <p><i class="fas fa-bed"></i> 2</p>
+            <p><i class="fas fa-bath"></i> 2</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>🛳️ Incluye:
+            Hospedaje por 4 o 7 noches en camarote familiar con vista al mar o balcón privado.
+            
+            Todas las comidas incluidas: desayunos, almuerzos, cenas temáticas y snacks ilimitados.
+            
+            Acceso completo a las actividades y shows a bordo: musicales, fuegos artificiales en alta mar, cine bajo las estrellas y más.
+            
+            Encuentros mágicos con Mickey, Minnie, Elsa, Buzz Lightyear y muchos más.
+            
+            Clubes para niños y adolescentes con supervisión especializada.
+            
+            Zonas exclusivas para adultos: spa, restaurantes gourmet y piscinas tranquilas.
+            
+            Paradas en islas tropicales y la isla privada Disney Castaway Cay.</p>
+            <p>
+                🎁 Beneficios adicionales:
+Kit de bienvenida Disney.
+
+Créditos a bordo para souvenirs o servicios extra.
+
+Asistencia personalizada antes y durante el viaje.
+
+
+            </p>
+            <p><strong>$250.000 por noche</strong></p>
+            <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🏖️Paquete Familiar "Sol y Arena" – Playa del Carmen</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img7.jpg" alt="Hotel 2">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 4</p>
+            <p><i class="fas fa-bed"></i> 3</p>
+            <p><i class="fas fa-bath"></i> 2</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p> 🏖️ 5 noches en resort 4 estrellas frente al mar
+
+            Comidas y bebidas ilimitadas
+            
+            Club infantil, parque acuático y actividades familiares
+            
+            Excursión guiada a cenotes o ruinas mayas
+            
+            Traslados aeropuerto-hotel
+            </p>
+            <p><strong>$180.000 por noche</strong></p>
+            <h3>Calificaciones</h3>
+          <div class="estrellas">    
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🏞️ Paquete "Aventura en la Montaña" – Bariloche</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img9.jpg" alt="Hotel 3">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 4</p>
+            <p><i class="fas fa-bed"></i> 3</p>
+            <p><i class="fas fa-bath"></i> 1</p>
+            <p><i class="fas fa-shower"></i> 2</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Incluye:
+
+            🛏️ 4 noches en acogedoras cabañas familiares con cocina equipada y vista a los lagos.
+            
+            🚶 Caminatas guiadas por bosques y cerros, adaptadas a familias.
+            
+            🌲 Actividades de aventura: tirolesa, kayak, fogata nocturna y navegación en lago Nahuel Huapi.
+            
+                Subida en teleférico al Cerro Otto + merienda con chocolate caliente.
+            
+            🍫 Tour por chocolaterías con degustación incluida para grandes y chicos.
+            
+            🧭 Asistencia durante toda la estadía y seguro de viajes.
+            </p>
+            <p><strong>$220.000 por noche</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🎢 Paquete "Diversión sin Límites" Orlando con Parques Temáticos</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img11.jpg" alt="Hotel 3">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 3</p>
+            <p><i class="fas fa-bed"></i> 2</p>
+            <p><i class="fas fa-bath"></i> 3</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Incluye:
+
+            🏨 6 noches en hotel temático familiar con transporte directo a los parques.
+            
+            🎟️ Entradas de 3 o 5 días para Disney World y Universal Studios (pueden elegir).
+            
+            🚍 Transporte interno a todos los parques y zonas comerciales.
+            
+            🍴 Desayunos y cenas familiares en restaurantes con personajes.
+            
+            📱 Asistencia en español durante todo el viaje + guía digital con tips y mapas.
+            
+            Ideal para: Familias que aman la diversión, la magia y las aventuras sin parar.</p>
+          <p><strong>$350.000 por noche</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🏕️ Paquete Familiar "Naturaleza Total" Glamping en Familia</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img13.jpg" alt="Hotel 3">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 2</p>
+            <p><i class="fas fa-bed"></i> 2</p>
+            <p><i class="fas fa-bath"></i> 1</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Incluye:
+
+            🛖 3 noches en carpas de lujo, domos o eco-cabañas completamente equipadas.
+            
+            🍳 Desayunos campestres y cenas alrededor del fuego.
+            
+            🌿 Senderismo guiado, paseo en bote, avistamiento de aves y talleres creativos.
+            
+            🔥 Actividades nocturnas: fogata con malvaviscos, cuentos y observación de estrellas.
+            
+            🎨 Actividades para chicos: búsqueda del tesoro, mini huerta y arte natural.
+            
+            🚑 Seguro y asistencia 24/7.</p>
+            <p><strong>$250.000 por noche</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Paquete familiar "Navidad en Familia" Pueblo Nevado Mágico</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/img14.jpg" alt="Hotel 3">
+          <nav class="info-habitacion">
+            <p><i class="fas fa-user"></i> 2</p>
+            <p><i class="fas fa-bed"></i> 1</p>
+            <p><i class="fas fa-bath"></i> 1</p>
+            <p><i class="fas fa-shower"></i> 1</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Incluye:
+
+            🏨 5 noches en hotel boutique decorado con temática navideña.
+            
+            🎄 Decoración personalizada en la habitación + árbol familiar.
+            
+            🍽️ Cena navideña con menú especial, brindis y regalos sorpresa para los niños.
+            
+            ⛸️ Actividades como patinaje sobre hielo, paseos en trineo, villancicos y visita a la casa de Papá Noel.
+            
+            🛍️ Acceso a mercados navideños locales con artesanías y comidas típicas.
+            
+            📸 Sesión de fotos profesional familiar con fondo nevado.</p>
+            <p><strong>$200.000 por noche</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let scrollX = 0;
+    const contenedor = document.getElementById("contenedorCards");
+
+    function mover(direccion) {
+      const width = contenedor.querySelector(".card").offsetWidth + 20;
+      scrollX += width * direccion;
+      contenedor.scrollTo({ left: scrollX, behavior: "smooth" });
+    }
+
+    function abrirModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = "block";
+    }
+
+    function cerrarModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modales = document.querySelectorAll(".modal");
+      modales.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+
+        window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+  </script>
+</body>
+</html>

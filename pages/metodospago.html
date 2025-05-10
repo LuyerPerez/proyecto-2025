@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripBooker</title>
+    <link rel="stylesheet" href="metodospago.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="banner">
+    <header id="miHeader">
+        <a href="index.html"><img src="../image/logo.png" width="350px"></a>
+        <nav class="links">
+            <a href="index.html" class="link"><i class="fas fa-home"></i> Inicio</a>
+            <a href="hoteles.html" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+            <a href="vuelos.html" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+            <a href="actividades.html" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+            <a href="carros.html" class="link"><i class="fas fa-car"></i> Carros</a>
+            <a href="buses.html" class="link"><i class="fas fa-bus"></i> Buses</a>
+            <a href="reservas.html" class="link"><i class="fas fa-user"></i> Reservas</a>
+        </nav>
+    </header>
+    <div class="overlay">
+        <h1 style="color: #fff; text-align: center; font-size: 50px; padding: 50px;">Métodos de pago</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="paquete-card">
+        <h2>Paquete reservado</h2>
+        <img src="../image/hotel-1.avif" alt="" width="300px">
+        <p><strong>Destino:</strong> Cancún, México</p>
+        <p><strong>Hotel:</strong> Grand Oasis</p>
+        <p><strong>Vuelo:</strong> 12 de Agosto, 10:00 AM</p>
+        <p><strong>Actividades:</strong> Tour a Chichén Itzá, snorkel en Xcaret</p>
+        <p><strong>Precio total:</strong> $850 USD</p>
+        <button onclick="abrirModal()">Ver detalles</button>
+    </div>
+
+    <div class="formulario-pago">
+        <h2>Procesar pago</h2>
+        <label>Nombre en la tarjeta</label>
+        <input type="text" placeholder="Ej: Juan Pérez">
+
+        <label>Número de tarjeta</label>
+        <input type="text" placeholder="0000 0000 0000 0000">
+
+        <label>Fecha de vencimiento</label>
+        <input type="month">
+
+        <label>Código CVV</label>
+        <input type="text" placeholder="123">
+
+        <label>Método de pago</label>
+        <select>
+            <option>Tarjeta de crédito</option>
+            <option>Tarjeta de débito</option>
+            <option>PayPal</option>
+        </select>
+
+        <button onclick="confirmarPago()">Pagar ahora</button>
+    </div>
+</div>
+
+<div id="miModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <img src="../image/hotel-1.avif" alt="" width="300px" border-radius="10px">
+        <h2>Detalles del viaje</h2>
+        <p>Salida: 12 de Agosto, 2025</p>
+        <p>Duración: 5 días, 4 noches</p>
+        <p>Incluye vuelo, hospedaje, tours y seguro de viaje</p>
+        <p>Precio total: $850.000 COP</p>
+    </div>
+</div>
+
+<div id="modalConfirmacion" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarConfirmacion()">&times;</span>
+        <h2>¡Felicidades!</h2>
+        <p>Tu viaje ha sido reservado exitosamente.</p>
+        <div class="detalle-reserva">
+            <p><strong>Destino:</strong> Cancún, México</p>
+            <p><strong>Hotel:</strong> Grand Oasis</p>
+            <p><strong>Vuelo:</strong> 12 de Agosto, 10:00 AM</p>
+            <p><strong>Actividades:</strong> Tour a Chichén Itzá, snorkel en Xcaret</p>
+            <p><strong>Precio total:</strong> $850.000 COP</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="info-empresa">
+        <img src="../image/logo.png" width="300px">
+        <h2>PLANIFICA TU VIAJE IDEAL TODO EN UN CLICK!!!</h2>
+    </div>
+    <div class="redes-sociales">
+        <h3>Seguinos en nuestras redes sociales</h3>
+        <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    function abrirModal() {
+        document.getElementById('miModal').style.display = 'flex';
+    }
+
+    function cerrarModal() {
+        document.getElementById('miModal').style.display = 'none';
+    }
+
+    function confirmarPago() {
+        document.getElementById('modalConfirmacion').style.display = 'flex';
+    }
+
+    function cerrarConfirmacion() {
+        document.getElementById('modalConfirmacion').style.display = 'none';
+    }
+</script>
+</body>
+</html>

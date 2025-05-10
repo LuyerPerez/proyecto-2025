@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hoteles - TripBooker</title>
+  <link rel="stylesheet" href="buses.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="banner">
+    <header>
+      <a href="index.html"><img src="../image/logo.png" width="350px"></a>
+      <nav class="links">
+        <a href="index.html" class="link"><i class="fas fa-home"></i> Inicio</a>
+        <a href="hoteles.html" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+        <a href="vuelos.html" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+        <a href="actividades.html" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+        <a href="carros.html" class="link"><i class="fas fa-car"></i> Carros</a>
+        <a href="buses.html" class="link"><i class="fas fa-bus"></i> Buses</a>
+        <a href="reservas.html" class="link"><i class="fas fa-user"></i> Reservas</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h2><i class="fas fa-bus"></i> Buses</h2>
+      <center>
+        <form class="form-container">
+          <div class="form-top-row">
+            <div class="input-group">
+              <i class="fas fa-plane"></i>
+              <input type="text" id="destino" placeholder=" " required />
+              <label for="destino">Origen</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-plane-arrival"></i>
+              <input type="text" id="fecha-entrada" required />
+              <label for="fecha-entrada">Destino</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-calendar-check"></i>
+              <input type="date" id="fecha-salida" required />
+              <label for="fecha-salida">Fecha de ida</label>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="number" id="personas" min="1" required />
+              <label for="personas">Pasajeros</label>
+            </div>
+            <button type="button" class="btn btn-confirmar">
+              <i class="fas fa-check-circle"></i> Confirmar
+            </button>
+          </div>
+          <div class="form-bottom-row">
+            <button type="submit" class="btn btn-buscar">
+              <i class="fas fa-search"></i> Buscar
+            </button>
+          </div>
+        </form>
+      </center>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <center><h1><i class="fas fa-bus"></i> Autobuses en (Origen)</h1></center>
+    <div class="contenedor-hoteles">
+      <button class="nav-btn" onclick="mover(-1)"><i class="fas fa-chevron-left"></i></button>
+      <div class="contenedor-cards" id="contenedorCards">
+        <div class="card">
+          <img src="../image/brasilia.jpg" alt="Expreso brasilia" />
+          <h3>Expreso Brasilia</h3>
+          <p>Expresa con cobertura nacional y excelente puntualidad.Asientos reclinables,aire acondicionador y pantallas individuales</p>
+          <p>Desde $90.000 por trayecto</p>
+          <button onclick="abrirModal('modal1')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/copetran.jpg" alt="copetran" />
+          <h3>Copetran</h3>
+          <p>Mas de 70 años de experiencia.cuenta con bus doble piso,baño a bordo y entretenimiento</p>
+          <p>Desde $85.000 por trayecto</p>
+          <button onclick="abrirModal('modal2')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/macarena.jpg" alt="Flota la macarena " />
+          <h3>Flota la macarena</h3>
+          <p>Famosa por su etencion al cliente y rutas hacia el sur del pais</p>
+          <p>Desde $75.000 por trayecto</p>
+          <button onclick="abrirModal('modal3')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/Bolivariano.jpg" alt="Bolivariano" />
+          <h3>Bolivariano</h3>
+          <p>Empresa con altos estandares de seguridad y comodidad</p>
+          <p>Desde $100.000 por trayecto</p>
+          <button onclick="abrirModal('modal4')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/Rapidoochoa.jpg" alt="rapido ochoa" />
+          <h3>Rapido Ochoa</h3>
+          <p>Buses modernos,con sillas confortables y buena cobertura nacioinal</p>
+          <p>Desde $95.000 por trayecto</p>
+          <button onclick="abrirModal('modal5')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+        <div class="card">
+          <img src="../image/Expresopalmira.jpg" alt="Expreso palmira" />
+          <h3>Expreso palmira</h3>
+          <p>Ideal para rutas hacia el occidente del pais.Buena reputacion en puntualidad</p>
+          <p>Desde $80.000 por trayecto</p>
+          <button onclick="abrirModal('modal6')"><i class="fas fa-info-circle"></i> Ver detalles</button>
+        </div>
+      </div>
+      <button class="nav-btn" onclick="mover(1)"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="info-empresa">
+      <img src="../image/logo.png" width="300px">
+      <h2>PLANIFICA TU VIAJE IDEAL TODO EN UN CLICK!!!</h2>
+    </div>
+    <div class="redes-sociales">
+      <h3>Seguinos en nuestras redes sociales</h3>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Expreso brasilia</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/brasilia.jpg" alt="Expreso brasilia">
+          <nav class="info-buses">
+            <p><i class="fas fa-calendar-day"></i> 23/02/2023</p>
+            <p><i class="fas fa-clock"></i> 10:00 am</p>
+            <p><i class="fas fa-plane-departure"></i> Bogotá</p>
+            <p><i class="fas fa-plane-arrival"></i> Cartagena</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Viaja con Expres Brasilia y disfruta de un trayecto cómodo y seguro. Esta empresa te ofrece buses modernos con aire acondicionado, asientos reclinables y un excelente servicio a bordo. Con rutas que conectan las principales ciudades del país, puedes confiar en su puntualidad y experiencia para llegar a tu destino sin preocupaciones.</p>
+          <p><strong>$75.000 por persona</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>copetran</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/copetran.jpg" alt="copetran">
+          <nav class="info-buses">
+            <p><i class="fas fa-calendar-day"></i> 23/02/2023</p>
+            <p><i class="fas fa-clock"></i> 11:00 am</p>
+            <p><i class="fas fa-plane-departure"></i> Bogotá</p>
+            <p><i class="fas fa-plane-arrival"></i> Cartagena</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Viaja con Copetran y experimenta comodidad, seguridad y puntualidad en cada trayecto. Con más de 70 años de experiencia en transporte terrestre, Copetran ofrece buses modernos con asientos reclinables, aire acondicionado y entretenimiento a bordo. Disfruta de un viaje tranquilo mientras te diriges a tu destino por algunas de las rutas más importantes del país.</p>
+          <p><strong>$85.000 por persona</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Flota la macarena</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/macarena.jpg" alt="Flota la macarena">
+          <nav class="info-buses">
+            <p><i class="fas fa-calendar-day"></i> 23/02/2023</p>
+            <p><i class="fas fa-clock"></i> 12:00 pm</p>
+            <p><i class="fas fa-plane-departure"></i> Bogotá</p>
+            <p><i class="fas fa-plane-arrival"></i> Cartagena</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Viaja con Flota La Macarena y recorre Colombia con total confianza. Esta empresa ofrece un servicio cómodo y seguro, ideal para quienes buscan puntualidad y atención al cliente. Sus buses cuentan con asientos ergonómicos, aire acondicionado y espacios diseñados para tu confort. Conectando diferentes regiones del país, Flota La Macarena es una excelente opción para tu próximo destino. </p>
+          <p><strong>$75.000 por persona</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Bolivariano</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/Bolivariano.jpg" alt="Bolivariano">
+          <nav class="info-buses">
+            <p><i class="fas fa-calendar-day"></i> 23/02/2023</p>
+            <p><i class="fas fa-clock"></i> 2:00 pm</p>
+            <p><i class="fas fa-plane-departure"></i> Bogotá</p>
+            <p><i class="fas fa-plane-arrival"></i> Cartagena</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Viaja con Bolivariano y disfruta de una experiencia de transporte cómoda, segura y de alta calidad. Con una amplia trayectoria en el país, Bolivariano ofrece buses modernos equipados con aire acondicionado, asientos reclinables, wifi y entretenimiento a bordo. Perfecto para trayectos largos o cortos, su servicio se destaca por la puntualidad y la excelente atención al pasajero.</p>
+          <p><strong>$100.000 por persona</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Rapido ochoa</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img src="../image/Rapidoochoa.jpg" alt="Rapido ochoa">
+          <nav class="info-buses">
+            <p><i class="fas fa-calendar-day"></i> 23/02/2023</p>
+            <p><i class="fas fa-clock"></i> 3:00 pm</p>
+            <p><i class="fas fa-plane-departure"></i> Bogotá</p>
+            <p><i class="fas fa-plane-arrival"></i> Cartagena</p>
+          </nav>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p> Viaja con Rápido Ochoa y disfruta de un servicio confiable, cómodo y accesible. Con décadas de experiencia en transporte terrestre, esta empresa conecta múltiples destinos del país con buses equipados con aire acondicionado, asientos reclinables y entretenimiento a bordo. Rápido Ochoa es una excelente opción para quienes buscan viajar tranquilos y llegar a tiempo.</p>
+          <p><strong>$95.000 por persona</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Expreso palmira</h2>
+        <button class="btn-reservar"><i class="fas fa-check"></i> Reservar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img">
+          </nav>
+          <img src="../image/Expresopalmira.jpg" alt="Expreso palmira">
+          <nav class="info-buses">
+            <p><i class="fas fa-calendar-day"></i> 23/02/2023</p>
+            <p><i class="fas fa-clock"></i> 4:00 pm</p>
+            <p><i class="fas fa-plane-departure"></i> Bogotá</p>
+            <p><i class="fas fa-plane-arrival"></i> Cartagena</p>
+        </div>
+        <div class="modal-info">
+          <h3>Descripción</h3>
+          <p>Viaja con Expreso Palmira y recorre Colombia de forma segura y confortable. Esta empresa ofrece un servicio eficiente y puntual, con buses modernos que cuentan con aire acondicionado, asientos reclinables y un ambiente pensado para tu comodidad. Ideal para conectar ciudades del suroccidente del país, Expreso Palmira es una opción confiable para tu próximo viaje.</p>
+          <p><strong>$80.000 por persona</strong></p>
+          <h3>Calificaciones</h3>
+          <div class="estrellas">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let scrollX = 0;
+    const contenedor = document.getElementById("contenedorCards");
+
+    function mover(direccion) {
+      const width = contenedor.querySelector(".card").offsetWidth + 20;
+      scrollX += width * direccion;
+      contenedor.scrollTo({ left: scrollX, behavior: "smooth" });
+    }
+
+    function abrirModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = "block";
+    }
+
+    function cerrarModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modales = document.querySelectorAll(".modal");
+      modales.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+
+        window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+  </script>
+</body>
+</html>

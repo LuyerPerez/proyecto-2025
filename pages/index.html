@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripBooker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="banner">
+        <header id="miHeader">
+            <a href="index.html"><img src="../image/logo.png" width="350px"></a>
+            <nav class="links">
+                <a href="index.html" class="link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="hoteles.html" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+                <a href="vuelos.html" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+                <a href="actividades.html" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+                <a href="carros.html" class="link"><i class="fas fa-car"></i> Carros</a>
+                <a href="buses.html" class="link"><i class="fas fa-bus"></i> Buses</a>
+                <a href="reservas.html" class="link"><i class="fas fa-user"></i> Reservas</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h2>Encuentra y reserva<br>tu próximo viaje</h2>
+            <p>Descubre las mejores ofertas en hoteles, vuelos, actividades y más.</p>
+        
+            <center>
+                <form class="form-container">
+                    <div class="form-top-row">
+                      <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="destino" placeholder=" " required />
+                        <label for="destino">Destino</label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="fecha-entrada" placeholder=" " required />
+                        <label for="fecha-entrada">Fecha de entrada</label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-calendar-check"></i>
+                        <input type="date" id="fecha-salida" placeholder=" " required />
+                        <label for="fecha-salida">Fecha de salida</label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="number" id="personas" min="1" placeholder=" " required />
+                        <label for="personas">Personas</label>
+                      </div>
+                
+                      <button type="button" class="btn btn-confirmar">
+                        <i class="fas fa-check-circle"></i> Confirmar
+                      </button>
+                    </div>
+                
+                    <div class="form-bottom-row">
+                      <button type="submit" class="btn btn-buscar">
+                        <i class="fas fa-search"></i> Buscar
+                      </button>
+                    </div>
+                  </form>
+            </center>
+            <div class="category-boxes">
+                <a href="empresas.html" class="category" style="color: 4f547c; text-decoration: none;">
+                    <i class="fas fa-briefcase"></i>
+                    <p>Empresarios</p>
+                </a>
+                <a href="paquetes.html" class="category" style="color: 4f547c; text-decoration: none;">
+                    <i class="fas fa-suitcase"></i>
+                    <p>Paquetes</p>
+                 </a>
+                 <a href="paquetesfam.html" class="category" style="color: 4f547c; text-decoration: none;">
+                    <i class="fas fa-users"></i>
+                    <p>Paquetes familiares</p>
+                </a>
+                <a href="carros.html" class="category" style="color: 4f547c; text-decoration: none;">
+                    <i class="fas fa-car"></i>
+                    <p>Carros</p>
+                </a>
+                <a href="buses.html" class="category" style="color: 4f547c; text-decoration: none;">
+                    <i class="fas fa-bus"></i>
+                    <p>Buses</p>
+                </a>
+            </div>
+        </section>
+    </div>
+    <div class="contenedor">
+        <center><h1><i class="fa-solid fa-star"></i> Hoteles Destacados</h1></center>
+        <div class="contenedor-cards">
+            <div class="card">
+                <img src="../image/hotel-1.avif" alt="Hotel 1" width="300px">
+                <h3>GHL Corales de Indias</h3>
+                <p>Dispone de habitaciones amplias y modernas con TV de pantalla plana y aire acondicionado.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img src="../image/hotel-2.avif" alt="Hotel 1" width="300px">
+                <h3>Hospedaje Rosa Blanca</h3>
+                <p>Se encuentra en Cartagena de Indias, en la región de Bolívar, a 6,2 km de Castillo de San Felipe de Barajas</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img src="../image/hotel-3.avif" alt="Hotel 1" width="300px">
+                <h3>Hotel El Faro</h3>
+                <p>Ofrece mostrador de información turística, habitaciones hipoalergénicas, salón de uso común, wifi gratis y terraza</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img src="../image/hotel-4.avif" alt="Hotel 1" width="300px">
+                <h3>Torices Guest House</h3>
+                <p>Pantalla plana, cocina totalmente equipada con nevera y horno, y baño compartido con ducha y artículos de aseo gratuitos.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            
+        </div>
+        <br>
+        <center><a href="" class="ver-mas"><i class="fas fa-arrow-right"></i> Ver más</a></center>
+        <br>
+
+    </div>
+
+    <footer>
+        <div class="info-empresa">
+            <img src="../image/logo.png" width="300px">
+            <h2>PLANIFICA TU VIAJE IDEAL TODO EN UN CLICK!!!</h2>
+        </div>
+
+        <div class="redes-sociales">
+            <h3>Seguinos en nuestras redes sociales</h3>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripBooker</title>
+    <link rel="stylesheet" href="reservas.css">
+</head>
+<body>
+    <div class="banner">
+        <header id="miHeader">
+            <a href="index.html"><img src="../image/logo.png" width="350px"></a>
+            <nav class="links">
+              <a href="index.html" class="link"><i class="fas fa-home"></i> Inicio</a>
+              <a href="hoteles.html" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+              <a href="vuelos.html" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+              <a href="actividades.html" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+              <a href="carros.html" class="link"><i class="fas fa-car"></i> Carros</a>
+              <a href="buses.html" class="link"><i class="fas fa-bus"></i> Buses</a>
+              <a href="reservas.html" class="link"><i class="fas fa-user"></i> Reservas</a>
+          </nav>
+        </header>
+        <div>
+            <h1 style="justify-content: center; color: white;">!Revisa tus reservas antes de pagar!</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div class="contenedor">
+        <h1 class="section-title"><i class="fas fa-plane"></i> Mis Vuelos Reservados</h1>
+        <div class="contenedor-reservas">
+          <button class="nav-btn" onclick="mover('vuelos', -1)"><i class="fas fa-chevron-left"></i></button>
+          <div class="contenedor-cards" id="contenedorVuelos">
+            <div class="card">
+              <center>
+                <img  class="logos" src="../image/logos/avianca.svg" alt="Avianca"/>
+              </center>
+              <div class="card-content">
+                <h3>Bogotá → Cartagena</h3>
+                <div class="reservation-detail">
+                  <i class="fas fa-plane"></i>
+                  <span>Avianca • Vuelo AV2405</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>23/05/2025 • 10:00 am</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-user"></i>
+                  <span>2 Pasajeros</span>
+                </div>
+                <div class="price">$500.000</div>
+                <div class="status confirmed">Confirmado</div>
+                <div class="actions">
+                  <button onclick="abrirModal('modal-vuelo1')"><i class="fas fa-info-circle"></i> Detalles</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <center>
+                <img  style="background-color: blue;" class="logos" src="../image/logos/LATAM.svg" alt="Latam"/>
+              </center>
+              <div class="card-content">
+                <h3>Cartagena → Medellín</h3>
+                <div class="reservation-detail">
+                  <i class="fas fa-plane"></i>
+                  <span>Latam • Vuelo LA3218</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>30/05/2025 • 15:30 pm</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-user"></i>
+                  <span>2 Pasajeros</span>
+                </div>
+                <div class="price">$360.000</div>
+                <div class="status confirmed">Confirmado</div>
+                <div class="actions">
+                  <button onclick="abrirModal('modal-vuelo2')"><i class="fas fa-info-circle"></i> Detalles</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <center>
+                <img class="logos" src="../image/logos/american.png" alt="American Airlines" style="width: 50%;"/>
+              </center>
+              <div class="card-content">
+                <h3>Medellín → Bogotá</h3>
+                <div class="reservation-detail">
+                  <i class="fas fa-plane"></i>
+                  <span>American Airlines • AA1204</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>05/06/2025 • 18:45 pm</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-user"></i>
+                  <span>2 Pasajeros</span>
+                </div>
+                <div class="price">$440.000</div>
+                <div class="status pending">Pendiente</div>
+                <div class="actions">
+                  <button onclick="abrirModal('modal-vuelo3')"><i class="fas fa-info-circle"></i> Detalles</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="nav-btn" onclick="mover('vuelos', 1)" style="right: 0;"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <h1 class="section-title"><i class="fas fa-bed"></i> Mis Hoteles Reservados</h1>
+        <div class="contenedor-reservas">
+          <button class="nav-btn" onclick="mover('hoteles', -1)"><i class="fas fa-chevron-left"></i></button>
+          <div class="contenedor-cards" id="contenedorHoteles">
+            <div class="card">
+              <img class="hot" src="../image/hotel-2.avif" alt="Hotel Cartagena" />
+              <div class="card-content">
+                <h3>Hotel Dann Cartagena</h3>
+                <div class="reservation-detail">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Cartagena, Colombia</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>23/05/2025 - 30/05/2025</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-bed"></i>
+                  <span>Habitación Doble • Desayuno incluido</span>
+                </div>
+                <div class="price">$1.400.000</div>
+                <div class="status confirmed">Confirmado</div>
+                <div class="actions">
+                  <button onclick="abrirModal('modal-hotel1')"><i class="fas fa-info-circle"></i> Detalles</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <img class="hot" src="../image/hotel-3.avif" alt="Hotel Medellín" />
+              <div class="card-content">
+                <h3>Hotel Diez Categoría Colombia</h3>
+                <div class="reservation-detail">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Medellín, Colombia</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>30/05/2025 - 05/06/2025</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-bed"></i>
+                  <span>Suite Junior • Todo incluido</span>
+                </div>
+                <div class="price">$1.800.000</div>
+                <div class="status confirmed">Confirmado</div>
+                <div class="actions">
+                  <button onclick="abrirModal('modal-hotel2')"><i class="fas fa-info-circle"></i> Detalles</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="nav-btn" onclick="mover('hoteles', 1)" style="right: 0;"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <h1 class="section-title"><i class="fas fa-car"></i> Mis Vehículos Reservados</h1>
+        <div class="contenedor-reservas">
+          <button class="nav-btn" onclick="mover('vehiculos', -1)"><i class="fas fa-chevron-left"></i></button>
+          <div class="contenedor-cards" id="contenedorVehiculos">
+            <div class="card">
+              <center>
+                <img src="../image/logos/autozen-suzuki-swift-sedan-plata.webp" alt="Carro en Cartagena" style="width: 90%; margin: 20px;" />
+              </center>
+              <div class="card-content">
+                <h3>Suzuki Swift</h3>
+                <div class="reservation-detail">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Cartagena, Colombia</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>23/05/2025 - 30/05/2025</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-car"></i>
+                  <span>Compacto • Transmisión Manual</span>
+                </div>
+                <div class="price">$700.000</div>
+                <div class="status confirmed">Confirmado</div>
+                <div class="actions">
+                  <button onclick="abrirModal('modal-carro1')"><i class="fas fa-info-circle"></i> Detalles</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <center>
+                <img src="../image/logos/renolduster.com_product_model_JM1_duster_c_A-ENS_0MDL2P1SERIELIM1_-TEKNH" alt="Carro en Medellín" style="width: 70%;" />
+              </center>
+              <div class="card-content">
+                <h3>Renault Duster</h3>
+                <div class="reservation-detail">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Medellín, Colombia</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-calendar-day"></i>
+                  <span>30/05/2025 - 05/06/2025</span>
+                </div>
+                <div class="reservation-detail">
+                  <i class="fas fa-car"></i>
+                  <span>SUV • Transmisión Automática</span>
+                </div>
+                <div class="price">$900.000</div>
+                <div class="status pending">Pendiente</div>
+                <div class="actions">
+                  <button onclick="abrirModal('modal-carro2')"><i class="fas fa-info-circle"></i> Detalles</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="nav-btn" onclick="mover('vehiculos', 1)" style="right: 0;"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div>
+          <div class="pago">
+            <a type="submit" href="metodospago.html" class="btn btn-pagar">
+              <i class="fas fa-search">Proceder al pago ------></i>
+            </a>
+          </div>
+      </div>
+    
+
+    <footer>
+        <div class="info-empresa">
+            <img src="../image/logo.png" width="300px">
+            <h2>PLANIFICA TU VIAJE IDEAL TODO EN UN CLICK!!!</h2>
+        </div>
+
+        <div class="redes-sociales">
+            <h3>Seguinos en nuestras redes sociales</h3>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script>
+      // Funciones para el carrusel de tarjetas
+function mover(contenedor, direccion) {
+  const contenedorEl = document.getElementById('contenedor' + contenedor.charAt(0).toUpperCase() + contenedor.slice(1));
+  const desplazamiento = contenedorEl.offsetWidth * 0.5 * direccion;
+  contenedorEl.scrollBy({
+    left: desplazamiento,
+    behavior: 'smooth'
+  });
+}
+
+// Funciones para los modales
+function abrirModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Evita el scroll en el fondo
+  }
+}
+
+function cerrarModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restaura el scroll
+  }
+}
+
+// Cerrar modal haciendo clic fuera del contenido
+window.addEventListener('click', function(event) {
+  const modales = document.getElementsByClassName('modal');
+  for (let modal of modales) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  }
+});
+
+// Cerrar modal con la tecla Escape
+window.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    const modales = document.getElementsByClassName('modal');
+    for (let modal of modales) {
+      if (modal.style.display === 'block') {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+  }
+});
+
+        window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+  </script>
+
+<div id="modal-vuelo1" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="cerrarModal('modal-vuelo1')">&times;</span>
+    <h2>Detalles del Vuelo</h2>
+    <div class="modal-header">
+      <img class="modal-logo" src="../image/logos/avianca.svg" alt="Avianca"/>
+      <h3>Bogotá → Cartagena</h3>
+    </div>
+    <div class="modal-details">
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-plane"></i> Aerolínea:</div>
+        <div class="detail-value">Avianca</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-hashtag"></i> Número de vuelo:</div>
+        <div class="detail-value">AV2405</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Fecha:</div>
+        <div class="detail-value">23/05/2025</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-clock"></i> Hora de salida:</div>
+        <div class="detail-value">10:00 am</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-clock"></i> Hora de llegada:</div>
+        <div class="detail-value">11:30 am</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-user"></i> Pasajeros:</div>
+        <div class="detail-value">2 adultos</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-suitcase"></i> Equipaje:</div>
+        <div class="detail-value">1 maleta por pasajero (23kg)</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-utensils"></i> Comidas:</div>
+        <div class="detail-value">Snack incluido</div>
+      </div>
+      <div class="detail-row total">
+        <div class="detail-label"><i class="fas fa-money-bill-wave"></i> Precio total:</div>
+        <div class="detail-value">$500.000</div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal-action" onclick="cerrarModal('modal-vuelo1')">Cerrar</button>
+      <button class="btn-modal-action danger">Cancelar reserva</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-vuelo2" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="cerrarModal('modal-vuelo2')">&times;</span>
+    <h2>Detalles del Vuelo</h2>
+    <div class="modal-header">
+      <img class="modal-logo" style="background-color: blue;" src="../image/logos/LATAM.svg" alt="Latam"/>
+      <h3>Cartagena → Medellín</h3>
+    </div>
+    <div class="modal-details">
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-plane"></i> Aerolínea:</div>
+        <div class="detail-value">Latam</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-hashtag"></i> Número de vuelo:</div>
+        <div class="detail-value">LA3218</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Fecha:</div>
+        <div class="detail-value">30/05/2025</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-clock"></i> Hora de salida:</div>
+        <div class="detail-value">15:30 pm</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-clock"></i> Hora de llegada:</div>
+        <div class="detail-value">16:45 pm</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-user"></i> Pasajeros:</div>
+        <div class="detail-value">2 adultos</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-suitcase"></i> Equipaje:</div>
+        <div class="detail-value">1 maleta por pasajero (23kg)</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-utensils"></i> Comidas:</div>
+        <div class="detail-value">No incluido</div>
+      </div>
+      <div class="detail-row total">
+        <div class="detail-label"><i class="fas fa-money-bill-wave"></i> Precio total:</div>
+        <div class="detail-value">$360.000</div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal-action" onclick="cerrarModal('modal-vuelo2')">Cerrar</button>
+      <button class="btn-modal-action danger">Cancelar reserva</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-vuelo3" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="cerrarModal('modal-vuelo3')">&times;</span>
+    <h2>Detalles del Vuelo</h2>
+    <div class="modal-header">
+      <img class="modal-logo" src="../image/logos/american.png" alt="American Airlines" style="width: 50%;"/>
+      <h3>Medellín → Bogotá</h3>
+    </div>
+    <div class="modal-details">
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-plane"></i> Aerolínea:</div>
+        <div class="detail-value">American Airlines</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-hashtag"></i> Número de vuelo:</div>
+        <div class="detail-value">AA1204</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Fecha:</div>
+        <div class="detail-value">05/06/2025</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-clock"></i> Hora de salida:</div>
+        <div class="detail-value">18:45 pm</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-clock"></i> Hora de llegada:</div>
+        <div class="detail-value">19:55 pm</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-user"></i> Pasajeros:</div>
+        <div class="detail-value">2 adultos</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-suitcase"></i> Equipaje:</div>
+        <div class="detail-value">1 maleta por pasajero (23kg)</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-utensils"></i> Comidas:</div>
+        <div class="detail-value">Snack y bebida incluidos</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-exclamation-triangle"></i> Estado:</div>
+        <div class="detail-value status-pending">Pendiente de pago</div>
+      </div>
+      <div class="detail-row total">
+        <div class="detail-label"><i class="fas fa-money-bill-wave"></i> Precio total:</div>
+        <div class="detail-value">$440.000</div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal-action" onclick="cerrarModal('modal-vuelo3')">Cerrar</button>
+      <button class="btn-modal-action primary">Completar pago</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modales para los hoteles -->
+<div id="modal-hotel1" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="cerrarModal('modal-hotel1')">&times;</span>
+    <h2>Detalles del Hotel</h2>
+    <div class="modal-header">
+      <img class="modal-image" src="../image/hotel-2.avif" alt="Hotel Cartagena" />
+      <h3>Hotel Dann Cartagena</h3>
+    </div>
+    <div class="modal-details">
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-map-marker-alt"></i> Ubicación:</div>
+        <div class="detail-value">Bocagrande, Cartagena, Colombia</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Check-in:</div>
+        <div class="detail-value">23/05/2025 - 15:00h</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Check-out:</div>
+        <div class="detail-value">30/05/2025 - 11:00h</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-bed"></i> Habitación:</div>
+        <div class="detail-value">Habitación Doble con Vista al Mar</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-user"></i> Huéspedes:</div>
+        <div class="detail-value">2 adultos</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-utensils"></i> Comidas:</div>
+        <div class="detail-value">Desayuno tipo buffet incluido</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-swimming-pool"></i> Servicios:</div>
+        <div class="detail-value">Piscina, gimnasio, spa, wifi gratis</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-ban"></i> Política de cancelación:</div>
+        <div class="detail-value">Cancelación gratuita hasta 48 horas antes</div>
+      </div>
+      <div class="detail-row total">
+        <div class="detail-label"><i class="fas fa-money-bill-wave"></i> Precio total (7 noches):</div>
+        <div class="detail-value">$1.400.000</div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal-action" onclick="cerrarModal('modal-hotel1')">Cerrar</button>
+      <button class="btn-modal-action danger">Cancelar reserva</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-hotel2" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="cerrarModal('modal-hotel2')">&times;</span>
+    <h2>Detalles del Hotel</h2>
+    <div class="modal-header">
+      <img class="modal-image" src="../image/hotel-3.avif" alt="Hotel Medellín" />
+      <h3>Hotel Diez Categoría Colombia</h3>
+    </div>
+    <div class="modal-details">
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-map-marker-alt"></i> Ubicación:</div>
+        <div class="detail-value">El Poblado, Medellín, Colombia</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Check-in:</div>
+        <div class="detail-value">30/05/2025 - 14:00h</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Check-out:</div>
+        <div class="detail-value">05/06/2025 - 12:00h</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-bed"></i> Habitación:</div>
+        <div class="detail-value">Suite Junior con Balcón</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-user"></i> Huéspedes:</div>
+        <div class="detail-value">2 adultos</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-utensils"></i> Comidas:</div>
+        <div class="detail-value">Todo incluido (desayuno, almuerzo y cena)</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-swimming-pool"></i> Servicios:</div>
+        <div class="detail-value">Piscina infinita, spa premium, gimnasio 24h, centro de negocios</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-ban"></i> Política de cancelación:</div>
+        <div class="detail-value">Cancelación gratuita hasta 72 horas antes</div>
+      </div>
+      <div class="detail-row total">
+        <div class="detail-label"><i class="fas fa-money-bill-wave"></i> Precio total (6 noches):</div>
+        <div class="detail-value">$1.800.000</div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal-action" onclick="cerrarModal('modal-hotel2')">Cerrar</button>
+      <button class="btn-modal-action danger">Cancelar reserva</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modales para los carros -->
+<div id="modal-carro1" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="cerrarModal('modal-carro1')">&times;</span>
+    <h2>Detalles del Vehículo</h2>
+    <div class="modal-header">
+      <img class="modal-image" src="../image/logos/autozen-suzuki-swift-sedan-plata.webp" alt="Suzuki Swift" />
+      <h3>Suzuki Swift</h3>
+    </div>
+    <div class="modal-details">
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-map-marker-alt"></i> Lugar de recogida:</div>
+        <div class="detail-value">Aeropuerto Rafael Núñez, Cartagena</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Fecha de recogida:</div>
+        <div class="detail-value">23/05/2025 - 12:00h</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Fecha de devolución:</div>
+        <div class="detail-value">30/05/2025 - 10:00h</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-car"></i> Tipo de vehículo:</div>
+        <div class="detail-value">Compacto</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-cog"></i> Transmisión:</div>
+        <div class="detail-value">Manual</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-gas-pump"></i> Combustible:</div>
+        <div class="detail-value">Gasolina - Tanque lleno</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-shield-alt"></i> Seguro:</div>
+        <div class="detail-value">Básico incluido (Franquicia: $1.000.000)</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-user-shield"></i> Conductor adicional:</div>
+        <div class="detail-value">No incluido</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-ban"></i> Política de cancelación:</div>
+        <div class="detail-value">Cancelación gratuita hasta 24 horas antes</div>
+      </div>
+      <div class="detail-row total">
+        <div class="detail-label"><i class="fas fa-money-bill-wave"></i> Precio total (7 días):</div>
+        <div class="detail-value">$700.000</div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal-action" onclick="cerrarModal('modal-carro1')">Cerrar</button>
+      <button class="btn-modal-action danger">Cancelar reserva</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-carro2" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="cerrarModal('modal-carro2')">&times;</span>
+    <h2>Detalles del Vehículo</h2>
+    <div class="modal-header">
+      <img class="modal-image" src="../image/logos/renolduster.com_product_model_JM1_duster_c_A-ENS_0MDL2P1SERIELIM1_-TEKNH" alt="Renault Duster" />
+      <h3>Renault Duster</h3>
+    </div>
+    <div class="modal-details">
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-map-marker-alt"></i> Lugar de recogida:</div>
+        <div class="detail-value">Aeropuerto José María Córdova, Medellín</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Fecha de recogida:</div>
+        <div class="detail-value">30/05/2025 - 18:00h</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-calendar-day"></i> Fecha de devolución:</div>
+        <div class="detail-value">05/06/2025 - 16:00h</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-car"></i> Tipo de vehículo:</div>
+        <div class="detail-value">SUV</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-cog"></i> Transmisión:</div>
+        <div class="detail-value">Automática</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-gas-pump"></i> Combustible:</div>
+        <div class="detail-value">Gasolina - Tanque lleno</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-shield-alt"></i> Seguro:</div>
+        <div class="detail-value">Premium incluido (Cobertura total)</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-user-shield"></i> Conductor adicional:</div>
+        <div class="detail-value">1 incluido</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-ban"></i> Política de cancelación:</div>
+        <div class="detail-value">Cancelación gratuita hasta 48 horas antes</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label"><i class="fas fa-exclamation-triangle"></i> Estado:</div>
+        <div class="detail-value status-pending">Pendiente de pago</div>
+      </div>
+      <div class="detail-row total">
+        <div class="detail-label"><i class="fas fa-money-bill-wave"></i> Precio total (6 días):</div>
+        <div class="detail-value">$900.000</div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal-action" onclick="cerrarModal('modal-carro2')">Cerrar</button>
+      <button class="btn-modal-action primary">Completar pago</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

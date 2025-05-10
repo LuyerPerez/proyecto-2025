@@ -1,0 +1,159 @@
+body {
+    background: #fff;
+    margin: 0;
+    font-family: 'Lucida Sans', sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 40px 200px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  header.scrolled {
+    background-color: #4f547c62;
+  }
+  
+  .links {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+  }
+  
+  .link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .link:hover::after {
+    width: 100%;
+  }
+  
+  .banner {
+    width: 100%;
+    background: url("../image/fondo.avif") no-repeat center center/cover;
+  }
+  
+  footer {
+    background-color: #323653;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .redes-sociales a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 2rem;
+    transition: color 0.2s ease;
+  }
+  
+  .redes-sociales a:hover {
+    color: #4f547c;
+  }
+  
+  .container {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .paquete-card, .formulario-pago {
+    background: #f3f3f3;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .paquete-card h2 {
+    margin-top: 0;
+  }
+  
+  .paquete-card button {
+    background: #4f547c;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .formulario-pago label {
+    display: block;
+    margin: 15px 0 5px;
+  }
+  
+  .formulario-pago input, .formulario-pago select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .formulario-pago button {
+    margin-top: 20px;
+    background: #4f547c;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .detalle-reserva {
+    text-align: left;
+    margin-top: 20px;
+  }
+  

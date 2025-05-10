@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripBooker - Vuelos Empresariales</title>
+    <link rel="stylesheet" href="empresas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="banner">
+        <header id="miHeader">
+            <a href="index.html"><img src="../image/logo.png" width="350px"></a>
+            <nav class="links">
+                <a href="index.html" class="link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="hoteles.html" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+                <a href="vuelos.html" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+                <a href="actividades.html" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+                <a href="carros.html" class="link"><i class="fas fa-car"></i> Carros</a>
+                <a href="buses.html" class="link"><i class="fas fa-bus"></i> Buses</a>
+                <a href="reservas.html" class="link"><i class="fas fa-user"></i> Reservas</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h2>Soluciones de viaje<br>para empresarios</h2>
+            <p>Planifica vuelos recurrentes, reservas de vehículos y alojamiento para tu equipo de trabajo.</p>
+        
+            <center>
+                <form class="form-container">
+                    <div class="form-top-row">
+                      <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="destino" placeholder=" " required />
+                        <label for="destino">Destino frecuente</label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="fecha-inicio" placeholder=" " required />
+                        <label for="fecha-inicio"></label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-calendar-check"></i>
+                        <input type="date" id="fecha-fin" placeholder=" " required />
+                        <label for="fecha-fin"></label>
+                      </div>
+                
+                      <div class="input-group">
+                        <i class="fas fa-users"></i>
+                        <input type="number" id="viajeros" min="1" placeholder=" " required />
+                        <label for="viajeros">Viajeros</label>
+                      </div>
+                
+                      <button type="button" class="btn btn-confirmar">
+                        <i class="fas fa-check-circle"></i> Confirmar
+                      </button>
+                    </div>
+                
+                    <div class="form-bottom-row">
+                      <button type="submit" class="btn btn-buscar">
+                        <i class="fas fa-search"></i> Buscar paquetes
+                      </button>
+                    </div>
+                  </form>
+            </center>
+        </section>
+    </div>
+    <br>
+    <div style="margin: 20px;" class="contenedor">
+        <center><h1><i class="fa-solid fa-briefcase"></i> Paquetes Empresariales Destacados</h1></center>
+        <br>
+        <div class="contenedor-cards">
+            <div class="card">
+                <img class="imag" src="../image/bog-med.jfif" alt="Vuelo Ejecutivo" width="300px">
+                <h3>Bogotá - Medellín Semanal</h3>
+                <p>Vuelos ida y vuelta todos los lunes y viernes, hotel ejecutivo y transporte privado incluido.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/bog-cdm.jfif" alt="Vuelo Internacional" width="300px">
+                <h3>Bogotá - Ciudad de México</h3>
+                <p>Paquete mensual con vuelos ida y vuelta, hotel 5 estrellas y servicio de chofer personal.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/car-bar.avif" alt="Vuelo Regional" width="300px">
+                <h3>Cartagena - Barranquilla Diario</h3>
+                <p>Vuelos diarios entre ciudades, con opción de oficina temporal y transporte dedicado.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/cal-bog.jfif" alt="Vuelo Corporativo" width="300px">
+                <h3>Cali - Bogotá Quincenal</h3>
+                <p>Programa quincenal con vuelos fijos, mismas habitaciones de hotel y traslados ejecutivos.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver detalles</button></center>
+            </div>
+            
+        </div>
+        <br>
+        <center><a href="" class="ver-mas"><i class="fas fa-arrow-right"></i> Ver más</a></center>
+        <br>
+
+    </div>
+
+    <div class="contenedor">
+        <center><h1><i class="fa-solid fa-plane"></i> Vuelos Frecuentes Empresariales</h1></center>
+        <div class="contenedor-cards">
+            <div class="card">
+                <img class="imag" src="../image/nacionales.jfif" alt="Vuelo Nacional" width="300px">
+                <h3>Bogotá - Cartagena</h3>
+                <p>Vuelos ida y vuelta programados semanalmente con asignación de los mismos asientos.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver horarios</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/internacional.jpeg" alt="Vuelo Internacional" width="300px">
+                <h3>Medellín - Ciudad de Panamá</h3>
+                <p>Conexiones semanales con opción de reserva fija por 3, 6 o 12 meses.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver horarios</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/corporativos.webp" alt="Vuelo Corporativo" width="300px">
+                <h3>Bogotá - Lima</h3>
+                <p>Paquete empresarial con vuelos directos, sala VIP y traslado ejecutivo incluido.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver horarios</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/regional.jfif" alt="Vuelo Regional" width="300px">
+                <h3>Cali - Medellín</h3>
+                <p>Programa de vuelos bisemanales con opción de modificación flexible para equipos.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver horarios</button></center>
+            </div> 
+        </div>
+        <br>
+        <center><a href="" class="ver-mas"><i class="fas fa-arrow-right"></i> Ver más</a></center>
+        <br>
+    </div>
+
+    <div class="contenedor">
+        <center><h1><i class="fa-solid fa-car"></i> Transporte Ejecutivo Fijo</h1></center>
+        <div class="contenedor-cards">
+            <div class="card">
+                <img class="imag" src="../image/ser-pre.jfif" alt="Transporte Ejecutivo" width="300px">
+                <h3>Servicio Premium de Chofer</h3>
+                <p>Mismo conductor y vehículo para todos tus viajes de negocios, garantizando puntualidad y conocimiento de tus preferencias.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver opciones</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/suv-eje.jfif" alt="Transporte SUV" width="300px">
+                <h3>SUV Ejecutiva</h3>
+                <p>Vehículo espacioso para equipos de hasta 6 personas con WiFi a bordo y servicios de refrigerios.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver opciones</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/sed-eje.jfif" alt="Transporte Sedán" width="300px">
+                <h3>Sedán de Lujo</h3>
+                <p>Opción elegante para ejecutivos con servicio personalizado y recogida garantizada en aeropuerto.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver opciones</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/van-emp.jfif" alt="Transporte Van" width="300px">
+                <h3>Van Empresarial</h3>
+                <p>Para grupos de hasta 12 personas, ideal para traslados de equipos completos con espacio para equipaje.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver opciones</button></center>
+            </div>
+            
+        </div>
+        <br>
+        <center><a href="" class="ver-mas"><i class="fas fa-arrow-right"></i> Ver más</a></center>
+        <br>
+    </div>
+
+    <div class="contenedor">
+        <center><h1><i class="fa-solid fa-bed"></i> Hoteles para Estancias Recurrentes</h1></center>
+        <div class="contenedor-cards">
+            <div class="card">
+                <img class="imag" src="../image/hot-eje.jpg" alt="Hotel Ejecutivo" width="300px">
+                <h3>Suite Ejecutiva Reservada</h3>
+                <p>Mantén la misma habitación para todas tus visitas recurrentes, con tus preferencias guardadas.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver hoteles</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/hot-cor.jpg" alt="Hotel Corporativo" width="300px">
+                <h3>Programa Corporate Plus</h3>
+                <p>Habitaciones bloqueadas para tu empresa con descuentos por volumen y servicios premium incluidos.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver hoteles</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/hot-emp.jfif" alt="Hotel Business" width="300px">
+                <h3>Estancias Empresariales</h3>
+                <p>Alojamiento con espacios de trabajo, internet de alta velocidad y servicio de secretariado.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver hoteles</button></center>
+            </div>
+            <div class="card">
+                <img class="imag" src="../image/hot-cor.jpg" alt="Hotel Larga Estancia" width="300px">
+                <h3>Apartasuites Corporativas</h3>
+                <p>Para estancias prolongadas con las comodidades de un hogar y los servicios de un hotel 5 estrellas.</p>
+                <center><button><i class="fas fa-info-circle"></i> Ver hoteles</button></center>
+            </div>
+            
+        </div>
+        <br>
+        <center><a href="" class="ver-mas"><i class="fas fa-arrow-right"></i> Ver más</a></center>
+        <br>
+    </div>
+
+    <footer>
+        <div class="info-empresa">
+            <img src="../image/logo.png" width="300px">
+            <h2>SOLUCIONES DE VIAJE EMPRESARIAL A UN SOLO CLICK!</h2>
+        </div>
+        <div class="redes-sociales">
+            <h3>Seguinos en nuestras redes sociales</h3>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+ // Keep the existing scroll script
+ window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Add modal functionality
+        function openModal(data) {
+            // Set modal content
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalImage').src = data.image;
+            document.getElementById('modalDescription').textContent = data.description;
+            document.getElementById('modalPrice').textContent = data.price;
+            
+            // Clear and add features
+            const featuresList = document.getElementById('modalFeatures');
+            featuresList.innerHTML = '';
+            data.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="${feature.icon}"></i> ${feature.text}`;
+                featuresList.appendChild(li);
+            });
+            
+            // Show modal
+            document.getElementById('modalOverlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+        
+        function closeModal() {
+            document.getElementById('modalOverlay').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Allow scrolling again
+        }
+        
+        // Add click events to all buttons in cards
+        document.addEventListener('DOMContentLoaded', function() {
+            // Package data (sample data, you'll need to create your own)
+            const packages = {
+                'bogota-medellin': {
+                    title: 'Bogotá - Medellín Semanal',
+                    image: '../image/bog-med.jfif',
+                    description: 'Paquete ejecutivo con vuelos ida y vuelta todos los lunes y viernes, hotel ejecutivo en zona empresarial y transporte privado incluido.',
+                    price: '$2,150,000 / semana',
+                    features: [
+                        { icon: 'fas fa-plane', text: 'Vuelos: Lunes (AM) y Viernes (PM)' },
+                        { icon: 'fas fa-bed', text: 'Hotel: Habitación ejecutiva con desayuno' },
+                        { icon: 'fas fa-car', text: 'Transporte: Conductor privado' },
+                        { icon: 'fas fa-wifi', text: 'Internet de alta velocidad incluido' },
+                        { icon: 'fas fa-briefcase', text: 'Acceso a sala de reuniones' }
+                    ]
+                },
+                'bogota-cdmx': {
+                    title: 'Bogotá - Ciudad de México',
+                    image: '../image/bog-cdm.jfif',
+                    description: 'Paquete empresarial mensual con vuelos ida y vuelta, hotel 5 estrellas en zona financiera y servicio de chofer personal permanente.',
+                    price: '$8,500,000 / mes',
+                    features: [
+                        { icon: 'fas fa-plane', text: 'Vuelos directos programados' },
+                        { icon: 'fas fa-bed', text: 'Hotel 5 estrellas con suite ejecutiva' },
+                        { icon: 'fas fa-car', text: 'Servicio de chofer 24/7' },
+                        { icon: 'fas fa-utensils', text: 'Desayuno y cena incluidos' },
+                        { icon: 'fas fa-briefcase', text: 'Oficina temporal equipada' }
+                    ]
+                },
+                'cartagena-barranquilla': {
+                    title: 'Cartagena - Barranquilla Diario',
+                    image: '../image/car-bar.avif',
+                    description: 'Conexión diaria entre ciudades con opciones de oficina temporal, transporte dedicado y flexibilidad de horarios.',
+                    price: '$950,000 / semana',
+                    features: [
+                        { icon: 'fas fa-plane', text: 'Vuelos diarios: mañana y tarde' },
+                        { icon: 'fas fa-building', text: 'Oficina temporal con secretariado' },
+                        { icon: 'fas fa-car', text: 'Transporte dedicado entre destinos' },
+                        { icon: 'fas fa-calendar-alt', text: 'Flexibilidad para cambios' },
+                        { icon: 'fas fa-coffee', text: 'Servicio de cafetería incluido' }
+                    ]
+                },
+                'cali-bogota': {
+                    title: 'Cali - Bogotá Quincenal',
+                    image: '../image/cal-bog.jfif',
+                    description: 'Programa quincenal con vuelos en horarios fijos, mismas habitaciones de hotel y traslados ejecutivos con conductor asignado.',
+                    price: '$1,780,000 / quincena',
+                    features: [
+                        { icon: 'fas fa-plane', text: 'Vuelos: Lunes y Jueves, mismos asientos' },
+                        { icon: 'fas fa-bed', text: 'Habitación fija con tus preferencias' },
+                        { icon: 'fas fa-car', text: 'Mismo conductor para todos los traslados' },
+                        { icon: 'fas fa-suitcase', text: 'Almacenamiento de equipaje entre viajes' },
+                        { icon: 'fas fa-concierge-bell', text: 'Servicio de concierge personal' }
+                    ]
+                },
+                // Add more packages for other sections as needed
+                'chevrolet-captiva': {
+                    title: 'Chevrolet Captiva',
+                    image: '/api/placeholder/400/250', // Replace with actual image in production
+                    description: 'La Chevrolet Captiva es una SUV ideal para familias grandes o grupos que necesitan espacio adicional. Ofrece comodidad y un amplio maletero.',
+                    price: '$6.774.527 / mes',
+                    features: [
+                        { icon: 'fas fa-car-side', text: 'Motor: 2.4L' },
+                        { icon: 'fas fa-cogs', text: 'Transmisión: Automática de 6 velocidades' },
+                        { icon: 'fas fa-gas-pump', text: 'Consumo promedio: 10 km/l' },
+                        { icon: 'fas fa-shield-alt', text: 'Seguridad: Airbags frontales y laterales, frenos ABS, control de estabilidad' },
+                        { icon: 'fas fa-desktop', text: 'Entretenimiento: Pantalla táctil, Bluetooth' },
+                        { icon: 'fas fa-users', text: '7 Pasajeros' },
+                        { icon: 'fas fa-suitcase', text: 'Maletero Grande' }
+                    ]
+                }
+            };
+            
+            // Add click events to all detail buttons
+            const buttons = document.querySelectorAll('.card button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Find the closest card
+                    const card = this.closest('.card');
+                    // Get the heading text from the card
+                    const heading = card.querySelector('h3').textContent;
+                    
+                    // Determine which package to show
+                    let packageData;
+                    if (heading.includes('Bogotá - Medellín')) {
+                        packageData = packages['bogota-medellin'];
+                    } else if (heading.includes('Bogotá - Ciudad de México')) {
+                        packageData = packages['bogota-cdmx'];
+                    } else if (heading.includes('Cartagena - Barranquilla')) {
+                        packageData = packages['cartagena-barranquilla'];
+                    } else if (heading.includes('Cali - Bogotá')) {
+                        packageData = packages['cali-bogota'];
+                    } else {
+                        // Default to the Chevrolet Captiva for any other case
+                        packageData = packages['chevrolet-captiva'];
+                    }
+                    
+                    // Open modal with the data
+                    openModal(packageData);
+                });
+            });
+            
+            // Close modal when clicking outside
+            document.getElementById('modalOverlay').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Package Title</h2>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Package Image">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-section">
+                        <h3>Descripción</h3>
+                        <p id="modalDescription">Description text goes here.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Características</h3>
+                        <ul class="modal-features" id="modalFeatures">
+                            <!-- Features will be added dynamically -->
+                        </ul>
+                    </div>
+                    <div class="modal-price" id="modalPrice">$0 / mes</div>
+                    <button class="modal-button" id="modalButton">
+                        <i class="fas fa-check-circle"></i> Rentar Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

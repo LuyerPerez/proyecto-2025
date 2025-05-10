@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Actividades - TripBooker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="actividades.css" />
+    <script>
+        function mostrarDetallesActividad(idModal) {
+            const modal = document.getElementById(idModal);
+            if (modal) {
+                modal.style.display = "block";
+            }
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const closeButtons = document.querySelectorAll('.close-btn');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    if (modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="banner">
+        <header>
+            <a href="index.html"><img src="../image/logo.png" width="350px" alt="Logo TripBooker"></a>
+            <nav class="links">
+                <a href="index.html" class="link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="hoteles.html" class="link"><i class="fas fa-bed"></i> Hoteles</a>
+                <a href="vuelos.html" class="link"><i class="fas fa-plane"></i> Vuelos</a>
+                <a href="actividades.html" class="link"><i class="fas fa-hiking"></i> Actividades</a>
+                <a href="carros.html" class="link"><i class="fas fa-car"></i> Carros</a>
+                <a href="buses.html" class="link"><i class="fas fa-bus"></i> Buses</a>
+                <a href="reservas.html" class="link"><i class="fas fa-user"></i> Reservas</a>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <h2><i class="fas fa-hiking"></i> Descubre Actividades en tu Destino</h2>
+            <div class="search-container">
+                <div class="search-input">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="destino-actividad" placeholder="¿A dónde quieres ir?" />
+                </div>
+                <button class="btn-buscar-actividades">
+                    <i class="fas fa-search"></i> Buscar Actividades
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-actividades">
+        <h2>Actividades Populares en Bogotá</h2>
+        <div class="lista-actividades" id="listaActividades">
+            <div class="card-actividad" data-destino="Bogotá">
+                <img src="../image/mon.jpg" alt="Monserrate Bogotá">
+                <div class="info-actividad">
+                    <h3>Monserrate: Vistas Panorámicas</h3>
+                    <p>Disfruta de las impresionantes vistas de Bogotá desde la cima de Monserrate. Puedes subir en teleférico o funicular.</p>
+                    <button onclick="mostrarDetallesActividad('modal-monserrate')"><i class="fas fa-eye"></i> Ver Detalles</button>
+                </div>
+            </div>
+            <div class="card-actividad" data-destino="Bogotá">
+                <img src="../image/museo.jpg" alt="Museo del Oro Bogotá">
+                <div class="info-actividad">
+                    <h3>Museo del Oro: Tesoros Precolombinos</h3>
+                    <p>Descubre la fascinante colección de artefactos de oro precolombinos en uno de los museos más importantes de Colombia.</p>
+                    <button onclick="mostrarDetallesActividad('modal-museo-oro')"><i class="fas fa-eye"></i> Ver Detalles</button>
+                </div>
+            </div>
+            <div class="card-actividad" data-destino="Cartagena">
+                <img src="../image/cuidad.webp" alt="Ciudad Amurallada Cartagena">
+                <div class="info-actividad">
+                    <h3>Ciudad Amurallada: Historia y Encanto</h3>
+                    <p>Explora las calles históricas, plazas coloridas y la arquitectura colonial de la hermosa Ciudad Amurallada de Cartagena.</p>
+                    <button onclick="mostrarDetallesActividad('modal-ciudad-amurallada')"><i class="fas fa-eye"></i> Ver Detalles</button>
+                </div>
+            </div>
+            <div class="card-actividad" data-destino="Medellín">
+                <img src="../image/comuna.jpg" alt="Comuna 13 Medellín">
+                <div class="info-actividad">
+                    <h3>Comuna 13: Transformación y Arte Urbano</h3>
+                    <p>Realiza un recorrido por la Comuna 13 para conocer su historia de transformación a través del arte callejero y la cultura.</p>
+                    <button onclick="mostrarDetallesActividad('modal-comuna-13')"><i class="fas fa-eye"></i> Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="info-empresa">
+            <img src="../image/logo.png" width="300px" alt="Logo TripBooker">
+            <h2>PLANIFICA TU VIAJE IDEAL TODO EN UN CLICK!!!</h2>
+        </div>
+        <div class="redes-sociales">
+            <h3>Seguinos en nuestras redes sociales</h3>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <div id="modal-monserrate" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="modal-header">
+                <h2>Monserrate: Vistas Panorámicas</h2>
+            </div>
+            <div class="modal-body">
+                <img src="../image/mon.jpg" alt="Detalle Monserrate" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>Sube a la montaña de Monserrate, un importante cerro tutelar de Bogotá, para disfrutar de vistas panorámicas espectaculares de la ciudad. En la cima encontrarás una iglesia y varios restaurantes donde podrás disfrutar de la gastronomía local con un paisaje inigualable. Puedes ascender a pie (si tienes buena condición física), en teleférico o en funicular, cada opción ofreciendo una experiencia única.</p>
+                <h3>Información Práctica</h3>
+                <ul>
+                    <li><strong>Ubicación:</strong> Bogotá, Colombia</li>
+                    <li><strong>Horario Teleférico y Funicular:</strong> Varía según el día de la semana. Consultar horarios actualizados.</li>
+                    <li><strong>Costo:</strong> Los precios de los tickets varían según el medio de transporte y el día.</li>
+                    <li><strong>Recomendaciones:</strong> Llevar ropa abrigada, especialmente por la tarde, y calzado cómodo.</li>
+                </ul>
+                <div class="modal-footer">
+                    <button>Reservar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-museo-oro" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="modal-header">
+                <h2>Museo del Oro: Tesoros Precolombinos</h2>
+            </div>
+            <div class="modal-body">
+                <img src="../image/museo.jpg" alt="Detalle Museo del Oro" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>El Museo del Oro alberga una de las colecciones de orfebrería prehispánica más grandes del mundo. Explora sus salas para admirar la belleza y la historia de las piezas de oro y otros materiales de culturas indígenas de Colombia. Aprende sobre su significado cultural y su contexto histórico.</p>
+                <h3>Información Práctica</h3>
+                <ul>
+                    <li><strong>Ubicación:</strong> Bogotá, Colombia</li>
+                    <li><strong>Horario:</strong> Martes a sábado de 9:00 a.m. a 6:00 p.m., domingos y festivos de 10:00 a.m. a 5:00 p.m. Cerrado los lunes</li>
+                    <li><strong>Costo:</strong> Adultos: [Precio], Estudiantes con identificación: [Precio], Niños menores de 12 años: Gratis.</li>
+                    <li><strong>Recomendaciones:</strong> Dedica al menos 2 horas para recorrer el museo completo. No se permite tomar fotografías con flash.</li>
+                </ul>
+                <div class="modal-footer">
+                    <button>Reservar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-ciudad-amurallada" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="modal-header">
+                <h2>Ciudad Amurallada: Historia y Encanto</h2>
+            </div>
+            <div class="modal-body">
+                <img src="../image/cuidad.webp" alt="Detalle Ciudad Amurallada" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>La Ciudad Amurallada de Cartagena es un tesoro histórico declarado Patrimonio de la Humanidad por la UNESCO. Pasea por sus calles empedradas, admira la arquitectura colonial, visita sus iglesias y plazas llenas de vida. Disfruta de las vistas al mar Caribe desde las murallas y experimenta la magia de esta ciudad llena de historia y color.</p>
+                <h3>Información Práctica</h3>
+                <ul>
+                    <li><strong>Ubicación:</strong> Cartagena de Indias, Colombia</li>
+                    <li><strong>Actividades Recomendadas:</strong> Recorrer las murallas al atardecer, visitar el Palacio de la Inquisición, pasear por la Plaza de Bolívar, disfrutar de la vida nocturna en Getsemaní.</li>
+                    <li><strong>Costo:</strong> La entrada a la ciudad es gratuita, pero algunas atracciones dentro tienen costo.</li>
+                    <li><strong>Recomendaciones:</strong> Llevar ropa ligera y cómoda, protector solar y sombrero debido al clima cálido.</li>
+                </ul>
+                <div class="modal-footer">
+                    <button>Reservar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-comuna-13" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="modal-header">
+                <h2>Comuna 13: Transformación y Arte Urbano</h2>
+            </div>
+            <div class="modal-body">
+                <img src="../image/comuna.jpg" alt="Detalle Comuna 13" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <p>La Comuna 13 de Medellín es un ejemplo inspirador de transformación social. A través del arte urbano, la música y la resiliencia de sus habitantes, esta comunidad ha cambiado su historia. Realiza un tour guiado por sus calles llenas de murales coloridos, conoce su pasado y presente, y apoya a los emprendedores locales.</p>
+                <h3>Información Práctica</h3>
+                <ul>
+                    <li><strong>Ubicación:</strong> Medellín, Colombia</li>
+                    <li><strong>Tours Recomendados:</strong> Tours guiados por locales para conocer la historia y el arte de la comuna.</li>
+                    <li><strong>Costo:</strong> Los precios de los tours varían. Es recomendable reservar con anticipación.</li>
+                    <li><strong>Recomendaciones:</strong> Vestir ropa y calzado cómodos para caminar. Ser respetuoso con la comunidad y sus habitantes.</li>
+                </ul>
+                <div class="modal-footer">
+                    <button>Reservar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        function mostrarDetallesActividad(idModal) {
+            const modal = document.getElementById(idModal);
+            if (modal) {
+                modal.style.display = "block";
+            }
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const closeButtons = document.querySelectorAll('.close-btn');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    if (modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
